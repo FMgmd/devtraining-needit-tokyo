@@ -13,12 +13,14 @@
         <on_load>true</on_load>
         <order>100</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>false</run_scripts>
+        <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-
+	g_form.hideFieldMsg('u_other',true);
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-
+   // Display a message under the Other field to explain what to put in the
+    // Other field.
+    g_form.showFieldMsg('u_other','Briefly explain what you need.','info');
 }]]></script_true>
         <set_values/>
         <short_description>NeedIt show or hide Other field</short_description>
